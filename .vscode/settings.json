@@ -1,0 +1,4 @@
+{
+    "scss.lint.unknownAtRules": "ignore",
+}
+//essa regra vai fazer com que o Vscode pare de alertar "unknown"
