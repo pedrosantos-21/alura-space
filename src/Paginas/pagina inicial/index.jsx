@@ -1,30 +1,32 @@
-
 import banner from './banner.png';
-import Cabecalho from "../../componentes/Cabecalho";
-import Menu from "../../componentes/Menu";
-import Rodape from '../../componentes/Rodape';
-import styles from './PaginaInicial.module.scss'
-import Galeria from '../../componentes/Galeria';
+import styles from "./PaginaInicial.module.scss";
 
-export default function PaginaInicial(){
+import Menu from "componentes/Menu";
+import Rodape from "componentes/Rodape";
+import Cabecalho from "componentes/Cabecalho";
+import Galeria from "componentes/Galeria";
+import Populares from "componentes/Populares";
 
-    return(
-      <>
-        <Cabecalho/>
-        <main>
-          <section className={styles.principal}>
-            <Menu/>
-          <div className={styles.principal__imagem}> 
+export default function PaginaInicial() {
+
+  return (
+    <>
+      <Cabecalho />
+      <main>
+        <section className={styles.principal}>
+          <Menu />
+          <div className={styles.principal__imagem}>
             <h1>A galeria mais completa  do espaço</h1>
             <img src={banner} alt="A imagem da terra vista do espaço" />
           </div>
-          </section>
-        </main>  
-        <div>
-          <Galeria/>
+        </section>
+        <div className={styles.galeria}>
+          <Galeria />
+          <Populares />
         </div>
-          <Rodape/>
-      </>
-    );
+      </main>
+      <Rodape />
+    </>
+  );
 }
-    
+
